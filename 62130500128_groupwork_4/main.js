@@ -80,8 +80,8 @@ const app = {
                 text: "",
                 search: false,
             },
-            hasView: false,
-            viewImg: '',
+            selectview: false,
+            selectImg: '',
         };
     },
     methods: {
@@ -94,15 +94,15 @@ const app = {
 
         // viewimg
         toggleView(image) {
-            this.viewImg = this.image[image.no].url;
-            this.hasView = true;
+            this.selectImg = this.image[image.no].url;
+            this.selectview = true;
         },
         cancel() {
             this.form.search = !this.form.search
             this.form.text = '';
         },
         close() {
-            this.hasView = false;
+            this.selectview = false;
         }
     },
     computed: {

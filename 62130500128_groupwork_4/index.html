@@ -32,7 +32,7 @@
                 <span :class="{'hidden' : !form.search}">
                     <input class="px-2 border-2 border-white mx-2 text-black" placeholder="Search Picture"
                         v-model="form.text">
-                    <button class="mx-2 rouned text-white px-4 py-1 bg-red-500" @click="cancel">Cancle</button>
+                    <button class="mx-2 rouned text-white px-4 py-1 bg-red-500" @click="cancel">Cancel</button>
                 </span>
             </div>
         </div>
@@ -57,10 +57,10 @@
                 <h2 class="mb-2 text-2xl font-bold text-gray-800">No Photos.</h2>
             </div>
         </div>
-        <div v-show="hasView" class="fixed top-0 flex justify-center w-screen h-screen bg-black ">
+        <div v-show="selectview" class="fixed top-0 flex justify-center w-screen h-screen bg-black ">
             <div class="h-screen m-6 ">
                 <i class="flex-row-reverse text-white cursor-pointer far fa-2x fa-times-circle" @click="close"></i>
-                <img :src="viewImg" class="m-6 border border-4 border-white h-5/6">
+                <img :src="selectImg" class="m-6 border border-4 border-white h-5/6">
             </div>
         </div>
     </div>
